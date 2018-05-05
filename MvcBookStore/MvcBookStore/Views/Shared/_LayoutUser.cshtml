@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Online Movie Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h3 style="color:orange; text-align:center">Vũ Thanh Hoàng-15DH110103-Ca3</h3>
+    <div id="wrapper">
+        <div id="inner">
+            <div id="header">
+                <h1><img src="~/images/logo.gif" width="519" height="63" alt="Tiệm Sách Harry " /></h1>
+                <div id="nav">
+                    <a href="~/BookStore/Index">Trang chủ</a>
+                    |<a href="~/Admin/Sach">Quản lý sách</a>|<a href="~/Nguoidung/Dangky.cshtml">Đăng ký</a>|@Html.Action("GiohangPartial", "Giohang")
+
+                </div>
+                <!-- end nav -->
+                <a href="#"><img src="~/~/images/header_2.jpg" width="745" height="48" alt="" /></a>
+            </div>
+            <!-- end header -->
+            <dl id="browse">
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Action("Chude", "BookStore")
+                        @Html.Action("Nhaxuatban", "BookStore")
+                    </div>
+                </div>
+            </dl>
+            <div id="body">
+                <div class="inner">
+
+
+                    <div>
+                        @RenderBody()
+                    </div>
+                </div>
+                <!-- end .inner -->
+            </div>
+            <!-- end body -->
+            <div class="clear"></div>
+            <!-- end footer -->
+        </div>
+        <!-- end inner -->
+    </div>
+
+</body>
+</html>
